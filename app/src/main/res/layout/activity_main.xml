@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/nav_blue"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/AppTheme.AppBarOverlay" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        android:background="@drawable/et_rounded_corner"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="Search"
+        android:imeOptions="actionSearch|flagNoFullscreen"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white_alpha_50" />
+
+    <TextView
+        android:id="@+id/tv_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_search"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_msg" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_articles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_search"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/pg_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/et_search"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
